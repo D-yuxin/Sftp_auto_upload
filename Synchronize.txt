@@ -1,1 +1,11 @@
+option batch continue
+option confirm off
+option echo on
 
+# 连接SFTP，实例中 url:127.0.0.1;   usr:jh_test;   pwd:jh_test01
+open sftp://jh_test:jh_test01@127.0.0.1/
+
+# 同步本地目录到远程，本地目录:D:\FTP_TEST;远程目录:remote
+synchronize remote "D:\FTP_TEST" "/remote"
+
+exit
